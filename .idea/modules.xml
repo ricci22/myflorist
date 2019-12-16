@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/PhpstormProjects/myflorist/.idea/myflorist.iml" filepath="$USER_HOME$/PhpstormProjects/myflorist/.idea/myflorist.iml" />
+      <module fileurl="file://$USER_HOME$/myflorist/.idea/myflorist.iml" filepath="$USER_HOME$/myflorist/.idea/myflorist.iml" />
     </modules>
   </component>
 </project>
