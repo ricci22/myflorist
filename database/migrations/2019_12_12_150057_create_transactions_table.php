@@ -15,7 +15,6 @@ class CreateTransactionsTable extends Migration
     {
       Schema::create('transactions', function (Blueprint $table) {
         $table->bigIncrements('id');
-        $table->dateTime('date');
         $table->integer('total');
         $table->timestamps();
 

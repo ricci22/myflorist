@@ -18,13 +18,13 @@
             <div class="card m-2" style="width: 15rem;height: 20rem">
               <div class="card-body">
                 <h4 class="card-title text-center">{{$flower->name}}</h4>
-                <img class="card-img-top" width="150" height="150" src="/storage/cover_image/{{$flower->cover_image}}" alt="Card image cap">
-                <div class="card-body m-md-n3">
+                <img class="card-img-top" width="120" height="120" src="/storage/cover_image/{{$flower->cover_image}}" alt="Card image cap">
+                <div class="row card-body m-auto">
                   <p class="card-text">{{(substr($flower->desc, 0, 45)."...")}}</p>
                 </div>
-                <div class="row justify-content-center">
-                  <a href="/pages/{{$flower->id}}" class="btn btn-dark ml-sm-4 mr-auto">Details</a>
-                  <a href="/carts/{{$flower->id}}/edit" class="btn btn-secondary mr-sm-4 ml-auto">Order</a>
+                <div>
+                  <a href="/pages/{{$flower->id}}" class="btn btn-dark col-auto m-auto float-left">Details</a>
+                  <a href="/carts/{{$flower->id}}/edit" class="btn btn-secondary col-auto m-auto float-right">Order</a>
                 </div>
               </div>
             </div>

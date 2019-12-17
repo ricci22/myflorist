@@ -203,7 +203,7 @@ class CartsController extends Controller
       // validate if user entering the amount of qty
       $qty = $request->input('qty');
       if (is_null($qty)) {
-        return redirect ('/flowers/'.$id)->with('error', 'You need to enter the amount to add to cart');
+        return redirect('/pages/'.$id)->with('error', 'You need to enter the amount to add to cart');
       }
 
       // check if there is already a cart relate to the user
@@ -228,7 +228,7 @@ class CartsController extends Controller
         $cartDetail->qty = $qtyInput;
         // validate the qty Ordered must not exceed the flower Stock
         if ($cartDetail->qty > $flowerStock) {
-          return redirect('/flowers/'.$id)->with('error', 'Your order exceed the flower stock limit, Check your Cart');
+          return redirect('/pages/'.$id)->with('error', 'Your order exceed the flower stock limit, Check your Cart');
         }
         $cartDetail->flower_id = $id;
         $cartDetail->total = Flower::find($id)->price * $cartDetail->qty;
@@ -239,12 +239,12 @@ class CartsController extends Controller
         $cartDetail->qty += $qtyInput;
         // validate the qty Ordered must not exceed the flower Stock
         if ($cartDetail->qty > $flowerStock) {
-          return redirect('/flowers/'.$id)->with('error', 'Your order exceed the flower stock limit, Check your Cart');
+          return redirect('/pages/'.$id)->with('error', 'Your order exceed the flower stock limit, Check your Cart');
         }
         $cartDetail->total = Flower::find($id)->price * $cartDetail->qty;
         $cartDetail->save();
       }
-      return redirect('/flowers/'.$id)->with('success', 'Adding your Order to your Cart');
+      return redirect('/pages/'.$id)->with('success', 'Adding your Order to your Cart');
     }
 
     /**Cart Page, remove item from order
